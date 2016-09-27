@@ -9,6 +9,9 @@ let defaultSettings = require('./defaults');
 // Add needed plugins here
 let BowerWebpackPlugin = require('bower-webpack-plugin');
 
+let TransferWebpackPlugin = require('transfer-webpack-plugin');
+
+
 let config = Object.assign({}, baseConfig, {
   entry: path.join(__dirname, '../src/index'),
   cache: false,
@@ -21,6 +24,17 @@ let config = Object.assign({}, baseConfig, {
     new BowerWebpackPlugin({
       searchResolveModulesDirectories: false
     }),
+
+//copy 目录
+    new TransferWebpackPlugin([
+      {from: 'images' , to: 'images'},
+      {from: 'stores' , to: 'stores'}
+      ],path.join(__dirname, '../src')),
+    
+    
+
+
+
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
