@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // var React = require('react/addons');
-
+let path = require('path');
 
 
 let yeomanImage = require('../images/yeoman.png');
@@ -20,18 +20,23 @@ var imageDatas = require('../stores/imageDatas.json');
 imageDatas = (function genImageURL(imageDatasArr) {
 	for(var i = 0, j = imageDatasArr.length; i<j; i++){
 		var singleImageData = imageDatasArr[i];
-		// console.log(singleImageData.fileName);
+		// // console.log(singleImageData.fileName);
 
 		var prefix = '../images/';
 		var imgpath = prefix +singleImageData.fileName;
-		// console.log(imgpath);
-		// singleImageData.imageURL = require(imgpath);
+
 		singleImageData.imageURL = imgpath;
 
+
+		// let singleImageData = imageDatasArr[i];
+		// // path.join(__dirname, 'singleImageData.fileName');
+		// // singleImageData.imageURL = require(path.join('../images/', '2.jpg'));
+
+		// singleImageData.imageURL = require('../images/' + singleImageData.fileName);
 		// singleImageData.imageURL = require('../images/' + singleImageData.fileName);
 		// singleImageData.imageURL = require('../images/1.jpg');
 	
-		console.log(i);
+		// console.log(i);
 		// console.log(singleImageData.imageURL);
 
 		imageDatasArr[i] = singleImageData;
