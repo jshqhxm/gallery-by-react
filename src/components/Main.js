@@ -5,6 +5,9 @@ require('../styles/main.scss');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// var React = require('react/addons');
+
+
 
 let yeomanImage = require('../images/yeoman.png');
 // let yeomanImage = require('../images/2.jpg');
