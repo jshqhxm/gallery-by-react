@@ -26,14 +26,12 @@ let config = Object.assign({}, baseConfig, {
     }),
 
 //copy 目录
-    new TransferWebpackPlugin([
-      {from: 'images' , to: 'images'},
-      {from: 'stores' , to: 'stores'}
-      ],path.join(__dirname, '../src')),
+    // new TransferWebpackPlugin([
+    //    {from: 'images' , to: 'images'},
+    //   {from: 'stores' , to: 'stores'}
+    //   ],path.join(__dirname, '../src')),
     
     
-
-
 
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
@@ -52,5 +50,7 @@ config.module.loaders.push({
     [ path.join(__dirname, '/../src') ]
   )
 });
+
+
 
 module.exports = config;
