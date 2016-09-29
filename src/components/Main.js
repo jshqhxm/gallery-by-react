@@ -22,17 +22,17 @@ imageDatas = (function genImageURL(imageDatasArr) {
 		var singleImageData = imageDatasArr[i];
 		// // console.log(singleImageData.fileName);
 
-		var prefix = '../images/';
-		var imgpath = prefix +singleImageData.fileName;
+		// var prefix = '../images/';
+		// var imgpath = prefix +singleImageData.fileName;
 
-		singleImageData.imageURL = imgpath;
+		// singleImageData.imageURL = imgpath;
 
 
 		// let singleImageData = imageDatasArr[i];
 		// // path.join(__dirname, 'singleImageData.fileName');
 		// // singleImageData.imageURL = require(path.join('../images/', '2.jpg'));
 
-		// singleImageData.imageURL = require('../images/' + singleImageData.fileName);
+		singleImageData.imageURL = require('../images/' + singleImageData.fileName);
 		// singleImageData.imageURL = require('../images/' + singleImageData.fileName);
 		// singleImageData.imageURL = require('../images/1.jpg');
 	
