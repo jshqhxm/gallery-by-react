@@ -1,7 +1,7 @@
 # gallery-by-react
 one photo gallery project  based on  react.  
 
-
+慕课网 React实践图片画廊应用  Demo
 https://jshqhxm.github.io/gallery-by-react/
 
 
